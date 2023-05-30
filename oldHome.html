@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif, monospace;
+        width: 100%;
+        min-height: 100vh;
+        margin: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: aliceblue;
+    }
+
+    main {
+        background-color: rgb(32, 41, 50);
+
+        width: 500px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+</style>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<body>
+    <main style="">
+        <section style="background-color: rgb(8, 78, 131); padding:.6rem;">
+            <div>
+                <p style="color: #ffff; font-weight: 500;">Cracker
+                    <span style="color:#fff; background-color: black; border-radius: 999px; padding: 0 1rem;">
+                        <span id="clock"></span>
+                        <script>
+
+                            setInterval(() => {
+                                let data = new Date();
+                                document.querySelector('#clock').innerText =
+                                    (`${data.getHours()}:${data.getMinutes()}:${data.getSeconds()}`)
+                            }, 10)
+                        </script>
+                    </span>
+                </p>
+
+            </div>
+        </section>
+        <section style=" padding:0 .6rem ;  margin: .3rem 0 ;">
+            <div style="background-color: rgb(160, 62, 5); padding:.1rem; ">
+                <p style="color: #ffff; font-weight: 500; text-align: center;">Cracker V1.4.9</p>
+            </div>
+        </section>
+        <section style=" padding:0 .6rem ;  margin: .3rem 0 ;">
+            <h1 style="text-align: center; font-weight: 700; font-size: 16px;">Possiveis rosas</h1>
+            <div style="text-align: center; margin-top: 1rem;">
+                <button
+                    style="background-color: rgb(232, 34, 67); border: none;padding: .3rem;font-weight: 700;">8:48:18</button>
+                <button
+                    style="background-color: rgb(232, 34, 67); border: none;padding: .3rem;font-weight: 700;">8:58:17</button>
+                <button
+                    style="background-color: rgb(232, 34, 67); border: none;padding: .3rem;font-weight: 700;">8:56:37</button>
+            </div>
+        </section>
+
+        <section style=" padding:0 .6rem ;  margin-top: 2rem ;">
+            <input
+                style="
+                 border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: thin;
+                width:100%;color: #fff; background-color: transparent;border:none; outline: green; border-bottom: 2px solid rgb(8, 78, 131);"
+                type="text" placeholder="Horario">
+            <br>
+            <br>
+            <input
+                style="width:100%;color: #fff; background-color: transparent;border:none; outline: none; border-bottom: 2px solid rgb(8, 78, 131);"
+                type="text" placeholder="Número de predições">
+            <br><br>
+            <button
+                style="background-color: #676767; border: none;padding: .3rem;font-weight: 700;width: 100%;">Gerar</button>
+        </section>
+
+        <section style=" padding:0 .6rem ;  margin-top: 2rem ;">
+            <p style="background-color: red; line-height: rem;">
+            </p>
+
+        </section>
+    </main>
+</body>
+
+<script>
+    // if (String(Math.floor(Math.random() * 100) + 1) === "60") {
+        const c = new Date();
+        const formattedTime =
+            new Date().getHours() +  ":" +  (Math.floor(Math.random() * 59)< c.getMinutes() ? Math.floor(Math.random() * 59) :Math.floor(Math.random() * 59)) +  ":" + (Math.floor(Math.random() * 59)< c.getSeconds() ? Math.floor(Math.random() * 59) :Math.floor(Math.random() * 59) );
+            // new Date().getHours() +  ":" +  (Math.floor(Math.random() * 59) + c.getMinutes()) +  ":" + (Math.floor(Math.random() * 59) + c.getSeconds());
+console.log(formattedTime)
+        //   button2.textContent = formattedTime;
+        //   button2.style.backgroundColor = "#E91E63";
+        //   button2.style.display = "block";
+    // }
+
+</script>
+
+</html>
